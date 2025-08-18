@@ -27,6 +27,25 @@
         <a href = "#contact" class = "hover:text-teal-600">Contact</a>
       </nav>
 
+      <!-- mobile hamburgy!-->
+       <button id ="menu-btn" class = "md:hidden flex items-center text-gray-700 hover:text-teal-600 focus:outline-none">
+        <!-- hamburger icon-->
+         <svg class = "w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 6h18M3 12h18M3 18h18"></path>
+          </svg>
+      </button> 
+    </div>
+
+    <!-- mobile dropdown -->
+      <div id="menu" class="hidden md:hidden bg-white border-t border-gray-200">
+      <nav class="flex flex-col px-6 py-4 space-y-3 font-medium">
+        <a href="#about" class="hover:text-teal-600">About</a>
+        <a href="#projects" class="hover:text-teal-600">Projects</a>
+        <a href="#contact" class="hover:text-teal-600">Contact</a>
+      </nav>
+    </div>
+
     </header>
 
   <!-- hero section -->
