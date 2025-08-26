@@ -12,33 +12,37 @@
 
 <body class="bg-gray-50 text-gray-800 font-sans">
 
-  <!-- navigation-->
+  <!----------- navigation-------------->
    <header class = "fixed top-0 left-0 w-full bg-white shadow z-50">
     <div class = "max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
       <!-- logo -->
        <a href = "#" class = "text-xl font-bold text-teal-600">Jacqueline Sanchez</a>
 
-      <!-- desktop  menu options-->
+      
+    <!--------------------- DESKTOP configs --------------------->
+      <!-- desktop menu options-->
       <nav class = "hidden md:flex items-center space-x-6 font-medium">
         
         <a href = "#about" class = "hover:text-teal-600">About</a>
         <a href = "#projects" class = "hover:text-teal-600">Projects</a>
         <a href = "#contact" class = "hover:text-teal-600">Contact</a>
 
-    <!-- Resume dropdown -->
-    <div class="relative group">
-      <button class="px-4 py-2 rounded-lg bg-gradient-to-r from-teal-500 to-green-500 text-white font-semibold shadow-md hover:scale-105 transform transition">
-        Resume ▾
-      </button>
-      <div class="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-lg w-40">
-        <a href="resume.pdf" target="_blank" class="block px-4 py-2 text-gray-700 hover:bg-red-100">View Resume</a>
-        <a href="resume.pdf" download class="block px-4 py-2 text-gray-700 hover:bg-red-100">Download Resume</a>
-      </div>
-    </div>
+        <!---- resume option ----->
+        <div class="relative group">
+          <button class="px-4 py-2 rounded-lg bg-gradient-to-r from-teal-500 to-green-500 text-white font-semibold shadow-md hover:scale-105 transform transition">
+            Resume ▾
+          </button>
+          <!-- dropdown (desktop)---> 
+          <div class="absolute hidden group-hover:block bg-purplce-500/70 background-blur-md shadow-lg rounded-lg w-40">
+            <a href="resume.pdf" target="_blank" class="block px-4 py-2 text-gray-700 hover:bg-violet-100">View Resume</a>
+            <a href="resume.pdf" download class="block px-4 py-2 text-gray-700 hover:bg-violet-100">Download Resume</a>
+          </div>
+        </div>
 </nav>
 
-      <!-- mobile hamburgy!-->
+    <!--------------------- MOBILE configs --------------------->
+      <!-- mobile hamburger icon!-->
        <button id ="menu-btn" class = "md:hidden flex items-center text-gray-700 hover:text-teal-600 focus:outline-none">
         <!-- hamburger icon-->
          <svg class = "w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
@@ -48,18 +52,19 @@
       </button> 
     </div>
 
-    <!-- mobile dropdown -->
+    <!-- mobile menu options -->
       <div id="menu" class="hidden md:hidden bg-white border-t border-gray-200">
       <nav class="flex flex-col px-6 py-4 space-y-3 font-medium">
         <a href="#about" class="hover:text-teal-600">About</a>
         <a href="#projects" class="hover:text-teal-600">Projects</a>
         <a href="#contact" class="hover:text-teal-600">Contact</a>
 
-        <!-- resume dropdown (mobile) -->
+        <!-- resume options (mobile) -->
         <div class="relative">
           <button class="w-40 text-left px-2 py-2 rounded-lg bg-gradient-to-r from-teal-500 to-green-500 text-white font-semibold shadow-md">
             Resume ▾
           </button>
+          <!-- dropdown options for resume -->
           <div class="hidden absolute bg-white shadow-lg mt-2 rounded-lg w-40">
             <a href="resume.pdf" target="_blank" class="block px-4 py-2 text-gray-700 hover:bg-red-100">View Resume</a>
             <a href="resume.pdf" download class="block px-4 py-2 text-gray-700 hover:bg-red-100">Download Resume</a>
