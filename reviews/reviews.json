@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "title": "Using Tailwind CSS for Rapid UI Design",
+    "description": "Built my portfolio with Tailwind. Here's what I liked and didn't.",
+    "thumbnail": "thumbnails/tailwind.jpg",
+    "categories": ["Frontend", "CSS"],
+    "slug": "tailwind"
+  },
+  {
+    "id": "2",
+    "title": "Trying Supabase as a Firebase Alternative",
+    "description": "A walkthrough of Supabase features, pros, and cons.",
+    "thumbnail": "thumbnails/supabase.jpg",
+    "categories": ["Backend", "Database"],
+    "slug": "supabase"
+  }
+]

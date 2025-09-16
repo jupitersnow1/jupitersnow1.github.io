@@ -118,37 +118,73 @@
 
 
   <!-- my projects section -->
-  <section id="projects" class="py-20 bg-white px-6">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-12">My Projects</h2>
-      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+<section id="projects" class="py-20 bg-white px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12">My Projects</h2>
 
+    <div class="relative">
+      <!-- left button -->
+      <button id="prev" class="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 bg-gray-200 p-2 rounded-full shadow hover:bg-gray-300 z-10">
+        &#8592;
+      </button>
 
-        <!-- project card 1 -->
-        <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition">
+      <!-- carousel container (hidden scrollbar) -->
+      <div id="carousel" class="flex gap-6 overflow-hidden">
+        <!-- project cards -->
+        <div class="w-[80%] sm:w-[45%] md:w-[32%] flex-shrink-0 bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition">
           <h3 class="text-xl font-semibold mb-2">Library Management System</h3>
-          <p class="text-gray-600 mb-4">Full stack app using React, ASP.NET, and MS SQL Server to manage inventory, track checkouts, and syncc data in real-time.</p>
-          <a href="#" class="text-teal-600 font-medium hover:underline">View Project →</a>
+          <p class="text-gray-600 mb-4">Full stack app using React, ASP.NET, and MS SQL Server to manage inventory, track checkouts, and sync data in real-time.</p>
+          <a href="https://e-libraryuh.vercel.app/" class="text-teal-600 font-medium hover:underline">View Project →</a>
         </div>
 
-
-        <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition">
+        <div class="w-[80%] sm:w-[45%] md:w-[32%] flex-shrink-0 bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition">
           <h3 class="text-xl font-semibold mb-2">Geospatial Classifier</h3>
-          <p class="text-gray-600 mb-4">Python-based ML model application with SHAP explainability to classify land cover in Costa Rica, using geospatial data from Purdue University National Data Mine and the USDA Forest Department.</p>
+          <p class="text-gray-600 mb-4">Python-based ML model application with SHAP explainability to classify land cover in Costa Rica.</p>
           <a href="#" class="text-teal-600 font-medium hover:underline">View Project →</a>
         </div>
 
+        <div class="w-[80%] sm:w-[45%] md:w-[32%] flex-shrink-0 bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition">
+          <h3 class="text-xl font-semibold mb-2">Geospatial Classifier</h3>
+          <p class="text-gray-600 mb-4">Python-based ML model application with SHAP explainability to classify land cover in Costa Rica.</p>
+          <a href="https://coogchallengers.github.io/" class="text-teal-600 font-medium hover:underline">View Project →</a>
+        </div>
 
-        <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition">
+        <div class="w-[80%] sm:w-[45%] md:w-[32%] flex-shrink-0 bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition">
           <h3 class="text-xl font-semibold mb-2">Personal Portfolio</h3>
           <p class="text-gray-600 mb-4">Responsive personal website built with Tailwind.</p>
           <a href="#" class="text-teal-600 font-medium hover:underline">View Project →</a>
-
-
         </div>
       </div>
+
+      <!-- right button -->
+      <button id="next" class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 bg-gray-200 p-2 rounded-full shadow hover:bg-gray-300 z-10">
+        &#8594;
+      </button>
     </div>
-  </section>
+  </div>
+</section>
+
+<script>
+  const carousel = document.getElementById('carousel');
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+
+  // scroll amount roughly equal to card width + gap
+  function getScrollAmount() {
+    if(window.innerWidth >= 768) return carousel.children[0].offsetWidth + 24; // md+
+    if(window.innerWidth >= 640) return carousel.children[0].offsetWidth + 24; // sm
+    return carousel.children[0].offsetWidth + 24; // mobile
+  }
+
+  prev.addEventListener('click', () => {
+    carousel.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+  });
+
+  next.addEventListener('click', () => {
+    carousel.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+  });
+</script>
+
 
 
   <!-- let's connect section -->
