@@ -11,6 +11,10 @@
   <!-- social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
 </head>
 
 
@@ -156,6 +160,61 @@
 
   </section>
 
+  <!-- my experience timeline! -->
+  <section id = "experience" class = "py-20 bg-white px-6">
+    <div class = "max-w-4xl mx-auto">
+
+      <h2 class = "text-3xl font-bond mb-10 text text-center">My Journey</h2>
+
+      <div class = "relitive border-l-4 border-gray-200">
+
+      <!-- timeline item -->
+      <div class="mb-10 ml-6" data-aos="fade-right" data-aos-delay="100">
+        <div class="absolute w-4 h-4 bg-green-500 rounded-full -left-5 border-4 border-white"></div>
+        <time class="block mb-1 text-sm text-gray-500">2024-2025</time>
+        <h3 class="text-lg font-semibold">Machine Learning Research Intern · Purdue University & USDA Forest Service</h3>
+        <p class="text-gray-600 mt-2">
+          Collaborated with a team to design, develop, and prototype an application implementing a machine learning pipeline for satellite data processing and geospatial analysis, supporting agricultural research in Costa Rica. Advised by researchers at the USDA Forest Service, with emphasis on clean, modular, and reproducible code.
+        </p>
+      </div>
+
+      <!--timeline item -->
+      <div class="mb-10 ml-6" data-aos="fade-right" data-aos-delay="200">
+        <div class="absolute w-4 h-4 bg-cyan-500 rounded-full -left-5 border-4 border-white"></div>
+        <time class="block mb-1 text-sm text-gray-500">2024 - Present </time>
+        <h3 class="text-lg font-semibold">Technical Director · CoogChallengers x IEEE-NSM </h3>
+        <p class="text-gray-600 mt-2">
+          Directed a team of tech leads delivering Computer and Data Science workshops, balancing leadership oversight with hands-on contribution in designing and running sessions.
+        </p>
+      </div>
+
+      <!--timeline item -->
+      <div class="mb-10 ml-6" data-aos="fade-right" data-aos-delay="200">
+        <div class="absolute w-4 h-4 bg-red-500 rounded-full -left-5 border-4 border-white"></div>
+        <time class="block mb-1 text-sm text-gray-500">2024 - Present </time>
+        <h3 class="text-lg font-semibold">Programming and Data Structures Tutor · CougarCS </h3>
+        <p class="text-gray-600 mt-2">
+          Mentor and guide fellow students by designing workshops and collaborating to design creative outlets inhance data structures learning experience.
+        </p>
+      </div>
+
+      <!--timeline item -->
+      <div class="mb-10 ml-6" data-aos="fade-right" data-aos-delay="200">
+        <div class="absolute w-4 h-4 bg-red-500 rounded-full -left-5 border-4 border-white"></div>
+        <time class="block mb-1 text-sm text-gray-500">2024 - Present </time>
+        <h3 class="text-lg font-semibold">Computer Architecture & Organization Tutor · CougarCS </h3>
+        <p class="text-gray-600 mt-2">
+          Mentor and guide fellow students, fostering a deeper understanding of complex computing principles and problem-solving techniques.
+        </p>
+      </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  
+
 
   <!-- my projects section -->
 <section id="projects" class="py-20 bg-white px-6">
@@ -270,6 +329,16 @@ scheduling, and student resources into a unified platform.</p>
 
   <script src="js/menu.js"></script>
   <script src = "js/scrollspy.js"></script>
+
+  <!-- AOS JS - timeline anim. -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800, // ms
+      once: true,   
+    });
+  </script>
+
 
 </body>
 
