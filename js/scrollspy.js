@@ -1,23 +1,30 @@
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.nav-link');
+export function initScrollSpy() {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-link");
 
-window.addEventListener("scroll", () => {
-  let current = "";
+  if (!sections.length || !navLinks.length) return;
 
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100; // adjust for header height
-    const sectionHeight = section.clientHeight;
+  window.addEventListener("scroll", () => {
+    let current = "";
 
-    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-      current = section.getAttribute("id");
-    }
-  });
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120;
+      const sectionHeight = section.offsetHeight;
 
-  navLinks.forEach(link => {
-    link.classList.remove("text-teal-600", "font-semibold");
-    if(link.getAttribute("href") === `#${current}`){
-        link.classList.add("text-teal-600", "font-semibold");
-    }
+      if (
+        window.pageYOffset >= sectionTop &&
+        window.pageYOffset < sectionTop + sectionHeight
+      ) {
+        current = section.id;
+      }
     });
 
-  }); 
+    navLinks.forEach(link => {
+      link.classList.remove("text-teal-600", "font-semibold");
+
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("text-teal-600", "font-semibold");
+      }
+    });
+  });
+}
